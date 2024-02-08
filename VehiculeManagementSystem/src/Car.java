@@ -1,8 +1,6 @@
 
 public class Car implements Vehicle{
 
-	
-
 		private String engine;
 	    private int wheels;
 	    private String color;
@@ -10,8 +8,7 @@ public class Car implements Vehicle{
 	    private int numberOfDoors;
 	    private boolean hasAirConditioning;
 
-	    public Car(){
-	        
+	    public Car(){   
 	    }
 
 	    

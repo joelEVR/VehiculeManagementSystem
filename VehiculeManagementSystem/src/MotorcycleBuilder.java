@@ -1,36 +1,37 @@
 
 public class MotorcycleBuilder implements VehicleBuilder {
     
-	private String engine;
-    private int wheels;
-    private String color;
-    private String handlebarType;
+	private Motorcycle motorcycle;
 
+    public MotorcycleBuilder() {
+        this.motorcycle = new Motorcycle();
+    }
+    
     @Override
     public MotorcycleBuilder buildEngine(String engine) {
-        this.engine = engine;
+    	motorcycle.setEngine(engine);
         return this;
     }
 
     @Override
     public MotorcycleBuilder buildWheels(int numberOfWheels) {
-        this.wheels = numberOfWheels;
+    	motorcycle.setWheels(numberOfWheels);
         return this;
     }
 
     @Override
     public MotorcycleBuilder buildColor(String color) {
-        this.color = color;
+    	motorcycle.setColor(color);
         return this;
     }
 
     public MotorcycleBuilder buildHandlebarType(String handlebarType) {
-        this.handlebarType = handlebarType; // Método específico para Motorcycle
+    	motorcycle.setHandlebarType (handlebarType);
         return this;
     }
 
     @Override
     public Vehicle finish() {
-        return new Motorcycle(engine, wheels, color, handlebarType);
+        return motorcycle;
         }
     }

@@ -40,7 +40,7 @@ public class CarBuilder implements VehicleBuilder {
     }
 
     @Override
-    public Car finish() {
+    public Vehicle finish() {
         return car;
         }
     }
