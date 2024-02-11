@@ -1,4 +1,5 @@
 package Vehicle;
+
 public class Car implements Vehicle {
 
 	private String engine;
@@ -37,8 +38,7 @@ public class Car implements Vehicle {
 
 	@Override
 	public void start() {
-		System.out.println("Car with engine " + engine + ", " + wheels + " wheels, " + color + " color, " + transmission
-				+ " transmission, " + model + " model, and " + name + "name is starting");
+		System.out.println("Car is starting");
 	}
 
 	@Override

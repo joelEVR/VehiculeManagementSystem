@@ -9,7 +9,6 @@ public class Motorcycle implements Vehicle {
 	private String model;
 
 	public Motorcycle() {
-		// TODO Auto-generated constructor stub
 	}
 
 	public void setEngine(String engine) {
@@ -38,8 +37,7 @@ public class Motorcycle implements Vehicle {
 
 	@Override
 	public void start() {
-		System.out.println("Motorcycle with engine " + engine + ", " + wheels + " wheels, " + color + " color, " + transmission
-				+ " transmission, " + model + " model, and " + name + "name is starting");
+		System.out.println("Motorcycle is starting");
 	}
 
 	@Override

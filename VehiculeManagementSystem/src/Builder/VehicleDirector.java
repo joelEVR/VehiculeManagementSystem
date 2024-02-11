@@ -1,23 +1,17 @@
 package Builder;
+
 import Vehicle.Vehicle;
 
 public class VehicleDirector {
+	private VehicleBuilder vehicleBuilder;
 
-    public Vehicle buildSportsCar() {
-        CarBuilder builder = new CarBuilder();
-        return builder.buildEngine("V8")
-                      .buildWheels(4)
-                      .buildColor("Red")
-                      .buildTransmission("Manual")
-                      .buildName("Dodge")
-                      .buildModel("2005");
-    }
+	public VehicleDirector(VehicleBuilder builder) {
+		this.vehicleBuilder = builder;
+	}
 
-    public Vehicle buildStandardMotorcycle() {
-        MotorcycleBuilder builder = new MotorcycleBuilder();
-        return builder.buildEngine("250cc")
-                      .buildWheels(2)
-                      .buildColor("Black")
-                      .build();
-    }
+	public Vehicle buildVehicle() {
+		// El director simplemente inicia el proceso de construcción
+		// La configuración específica del vehículo se hace antes de este paso
+		return vehicleBuilder.build();
+	}
 }

@@ -1,4 +1,5 @@
 package Singleton;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,7 +24,6 @@ public class VehicleManager {
 					instance = new VehicleManager();
 				}
 			}
-
 		}
 		return instance;
 	}

@@ -1,22 +1,20 @@
 package Builder;
+
 import Vehicle.Vehicle;
 
 public interface VehicleBuilder {
 
-	public void buildName(String name);
-	
-	public void buildEngine(String engine);
+	VehicleBuilder buildEngine(String engine);
 
-	public void buildWheels(int numberOfWheels);
+	VehicleBuilder buildWheels(int numberOfWheels);
 
-	public void buildColor(String color);
-	
-	public void buildModel(String model);
-	
-	public void buildTransmission(String transmission);
-	
-	Vehicle build();
+	VehicleBuilder buildColor(String color);
 
+	VehicleBuilder buildName(String name);
 
+	VehicleBuilder buildModel(String model);
 
+	VehicleBuilder buildTransmission(String transmission);
+
+	Vehicle build(); // Método para finalizar la construcción y devolver el objeto Vehicle construido
 }

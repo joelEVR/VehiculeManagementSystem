@@ -1,4 +1,5 @@
 package Builder;
+
 import Vehicle.Motorcycle;
 import Vehicle.Vehicle;
 
@@ -11,33 +12,39 @@ public class MotorcycleBuilder implements VehicleBuilder {
 	}
 
 	@Override
-	public void buildEngine(String engine) {
+	public VehicleBuilder buildEngine(String engine) {
 		motorcycle.setEngine(engine);
+		return this;
 	}
 
 	@Override
-	public void buildWheels(int numberOfWheels) {
+	public VehicleBuilder buildWheels(int numberOfWheels) {
 		motorcycle.setWheels(numberOfWheels);
+		return this;
 	}
 
 	@Override
-	public void buildColor(String color) {
+	public VehicleBuilder buildColor(String color) {
 		motorcycle.setColor(color);
+		return this;
 	}
 
 	@Override
-	public void buildName(String name) {
+	public VehicleBuilder buildName(String name) {
 		motorcycle.setName(name);
+		return this;
 	}
 
 	@Override
-	public void buildModel(String model) {
+	public VehicleBuilder buildModel(String model) {
 		motorcycle.setModel(model);
+		return this;
 	}
 
 	@Override
-	public void buildTransmission(String transmission) {
+	public VehicleBuilder buildTransmission(String transmission) {
 		motorcycle.setTransmission(transmission);
+		return this;
 	}
 
 	@Override
