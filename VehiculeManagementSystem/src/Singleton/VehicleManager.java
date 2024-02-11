@@ -1,28 +1,31 @@
+package Singleton;
 import java.util.ArrayList;
 import java.util.List;
 
+import Vehicle.Vehicle;
+
 public class VehicleManager {
 
-	private static VehicleManager singleton;
+	private static VehicleManager instance;
 	private List<Vehicle> vehicles;
 
 	private VehicleManager() {
 		vehicles = new ArrayList<>();
 	}
 
-	public static VehicleManager getSingleton() {
+	public static VehicleManager getInstance() {
 
-		if (singleton == null) {
+		if (instance == null) {
 
 			synchronized (VehicleManager.class) {
 
-				if (singleton == null) {
-					singleton = new VehicleManager();
+				if (instance == null) {
+					instance = new VehicleManager();
 				}
 			}
 
 		}
-		return singleton;
+		return instance;
 	}
 
 	public void addVehicle(Vehicle vehicle) {
