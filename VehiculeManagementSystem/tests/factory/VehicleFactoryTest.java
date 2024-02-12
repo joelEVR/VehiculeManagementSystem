@@ -1,3 +1,4 @@
+package factory;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import builder.CarBuilder;
