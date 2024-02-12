@@ -4,7 +4,6 @@ import static org.junit.Assert.*;
 import builder.CarBuilder;
 import builder.MotorcycleBuilder;
 import builder.VehicleBuilder;
-import factory.VehicleFactory;
 
 /**
  * Tests the functionality of the {@link VehicleFactory} class to ensure it correctly

@@ -1,8 +1,6 @@
 package singleton;
 import static org.junit.Assert.*;
 import org.junit.Test;
-
-import singleton.VehicleManager;
 import vehicle.Car;
 
 /**

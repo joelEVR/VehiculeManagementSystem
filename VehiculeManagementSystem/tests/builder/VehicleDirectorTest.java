@@ -2,9 +2,6 @@ package builder;
 import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
-import builder.CarBuilder;
-import builder.VehicleBuilder;
-import builder.VehicleDirector;
 import vehicle.Car;
 import vehicle.Vehicle;
 
