@@ -14,7 +14,7 @@ public class VehicleManager {
     /**
      * The single instance of VehicleManager.
      */
-    private static VehicleManager instance;
+    private static volatile VehicleManager instance;
 
     /**
      * A list to hold vehicles.

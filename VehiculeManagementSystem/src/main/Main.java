@@ -18,21 +18,36 @@ public class Main {
 
 		// Use VehicleFactory to get CarBuilder, set properties, build, and add to
 		// manager
-		VehicleBuilder carBuilder1 = VehicleFactory.getVehicleBuilder("car").buildEngine("V8").buildWheels(4)
-				.buildColor("Blue").buildName("Mustang").buildModel("2025").buildTransmission("Manual");
+		VehicleBuilder carBuilder1 = VehicleFactory.getVehicleBuilder("car")
+				.buildEngine("V8")
+				.buildWheels(4)
+				.buildColor("Blue")
+				.buildName("Mustang")
+				.buildModel("2025")
+				.buildTransmission("Manual");
 		director.setBuilder(carBuilder1);
 		Vehicle car1 = director.buildVehicle();
 		manager.addVehicle(car1);
 
 		// Repeat the process for another car and a motorcycle
-		VehicleBuilder carBuilder2 = VehicleFactory.getVehicleBuilder("car").buildEngine("V6").buildWheels(4)
-				.buildColor("Red").buildName("Camaro").buildModel("2024").buildTransmission("Automatic");
+		VehicleBuilder carBuilder2 = VehicleFactory.getVehicleBuilder("car")
+				.buildEngine("V6")
+				.buildWheels(4)
+				.buildColor("Red")
+				.buildName("Camaro")
+				.buildModel("2024")
+				.buildTransmission("Automatic");
 		director.setBuilder(carBuilder2);
 		Vehicle car2 = director.buildVehicle();
 		manager.addVehicle(car2);
 
-		VehicleBuilder motorcycleBuilder = VehicleFactory.getVehicleBuilder("motorcycle").buildEngine("600cc")
-				.buildWheels(2).buildColor("Green").buildName("Ninja").buildModel("2023").buildTransmission("Manual");
+		VehicleBuilder motorcycleBuilder = VehicleFactory.getVehicleBuilder("motorcycle")
+				.buildEngine("600cc")
+				.buildWheels(2)
+				.buildColor("Green")
+				.buildName("Ninja")
+				.buildModel("2023")
+				.buildTransmission("Manual");
 		director.setBuilder(motorcycleBuilder);
 		Vehicle motorcycle = director.buildVehicle();
 		manager.addVehicle(motorcycle);
@@ -42,6 +57,20 @@ public class Main {
 	}
 }
 
+////Implementation with flow simplification
+//director.setBuilder(VehicleFactory.getVehicleBuilder("motorcycle")
+//	    .buildEngine("600cc")
+//	    .buildWheels(2)
+//	    .buildColor("Green")
+//	    .buildName("Ninja")
+//	    .buildModel("2023")
+//	    .buildTransmission("Manual"));
+//
+//	// Construir el vehículo utilizando el director y añadirlo al gestor de vehículos
+//	Vehicle motorcycle = director.buildVehicle();
+	
+	
+	
 /*
  * //Testing Singleton VehicleManager manager1 = VehicleManager.getInstance();
  * VehicleManager manager2 = VehicleManager.getInstance();
